@@ -25,5 +25,4 @@ public class ScrapersTest {
 		standardDriver.get("https://www.google.com");
 		assertEquals(standardDriver, firefoxMethodDriver);
 	}
-	
 }
