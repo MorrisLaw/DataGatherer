@@ -35,7 +35,7 @@ public class Instagram extends Scrapers {
 
 	@Override
 	WebElement scrapePage() {
-		ChromeDriver driver = Chrome(constructBaseUrl());
+		ChromeDriver driver = chrome(constructBaseUrl());
 		return driver.findElementByCssSelector("");
 	}
 	

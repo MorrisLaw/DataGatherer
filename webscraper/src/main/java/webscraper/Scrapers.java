@@ -11,13 +11,13 @@ public abstract class Scrapers {
 	private static FirefoxDriver firefoxDriver;
 	private static ChromeDriver chromeDriver;
 	
-	static ChromeDriver Chrome(String sourceUrl) {
+	static ChromeDriver chrome(String sourceUrl) {
 		chromeDriver = new ChromeDriver();
 		chromeDriver.get(sourceUrl);
 		return chromeDriver;
 	}
 	
-	static FirefoxDriver Firefox(String sourceUrl) {
+	static FirefoxDriver firefox(String sourceUrl) {
 		firefoxDriver = new FirefoxDriver();
 		firefoxDriver.get(sourceUrl);
 		return firefoxDriver;
