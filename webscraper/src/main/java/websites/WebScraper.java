@@ -1,4 +1,4 @@
-package webscraper;
+package websites;
 
 import java.util.HashMap;
 import java.util.Map;

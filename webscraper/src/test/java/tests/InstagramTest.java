@@ -1,4 +1,4 @@
-package webscraper;
+package tests;
 
 import static org.junit.Assert.*;
 

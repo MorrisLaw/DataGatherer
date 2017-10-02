@@ -1,11 +1,11 @@
-package webscraper;
+package websites;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Instagram extends Scrapers {
 	
@@ -35,8 +35,10 @@ public class Instagram extends Scrapers {
 
 	@Override
 	WebElement scrapePage() {
-		ChromeDriver driver = chrome(constructBaseUrl());
-		return driver.findElementByCssSelector("");
+//		ChromeDriver driver = chrome(constructBaseUrl());
+//		return driver.findElementByCssSelector("");
+		FirefoxDriver driver = firefox(constructBaseUrl());
+		return driver.findElementByCssSelector("._jzhdd > div:nth-child(4)");
 	}
 	
 	@Override

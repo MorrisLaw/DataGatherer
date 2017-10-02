@@ -1,4 +1,4 @@
-package webscraper;
+package websites;
 
 import java.util.ArrayList;
 
@@ -11,13 +11,13 @@ public abstract class Scrapers {
 	private static FirefoxDriver firefoxDriver;
 	private static ChromeDriver chromeDriver;
 	
-	static ChromeDriver chrome(String sourceUrl) {
+	public static ChromeDriver chrome(String sourceUrl) {
 		chromeDriver = new ChromeDriver();
 		chromeDriver.get(sourceUrl);
 		return chromeDriver;
 	}
 	
-	static FirefoxDriver firefox(String sourceUrl) {
+	public static FirefoxDriver firefox(String sourceUrl) {
 		firefoxDriver = new FirefoxDriver();
 		firefoxDriver.get(sourceUrl);
 		return firefoxDriver;
