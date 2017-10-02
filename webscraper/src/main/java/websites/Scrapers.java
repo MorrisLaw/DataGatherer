@@ -1,6 +1,7 @@
 package websites;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,7 +29,7 @@ public abstract class Scrapers {
 	}
 	
 	abstract String constructBaseUrl();
-	abstract WebElement scrapePage();
+	abstract List<List<WebElement>> scrapePage(String baseUrl);
 	abstract ArrayList<String> getChildLinks();
 	abstract ArrayList<String> getHashTags();
 }
