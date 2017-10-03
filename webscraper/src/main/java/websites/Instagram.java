@@ -9,16 +9,26 @@ import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Instagram extends Scrapers {
 	
-	protected String hashTag;
-	protected StringBuilder hashTagExtension;
+	private String hashTag;
+	private StringBuilder hashTagExtension;
+	private ChromeDriver chromeDriver;
+	private String igUrl = "https://www.instagram.com/"; 
 	Scanner sc;
 	
+	/**
+	 * Builds the URL that we will be scraping data from, by appending
+	 * the hashtag to the Instagram URL.
+	 * 
+	 * @return constructedUrl.toString() - The newly created URL derived
+	 * from both the Instagram tags URL "https://www.instagram.com/explore/tags
+	 * and the provided hashtag.
+	 */
 	@Override
-	String constructBaseUrl() {
-		// Retrieve the hashtag from the user via console.
+	protected String constructBaseUrl() {
 		System.out.println("Please provide the hashtag from which we will be scraping data.");
 		try (Scanner sc = new Scanner(System.in)) {
 			hashTag = sc.nextLine();
@@ -28,16 +38,34 @@ public class Instagram extends Scrapers {
 		} catch(InputMismatchException | NullPointerException e) {
 			e.printStackTrace();
 		}
-		// Concatenate the instagram url with the hashtag.
-		String igUrl = Scrapers.instagramBase();
 		StringBuilder constructedUrl = new StringBuilder(igUrl);
 		constructedUrl.append(hashTagExtension);
 		
 		return constructedUrl.toString();
 	}
+	
+	/**
+	 * Navigates to the web page via the ChromeDriver.
+	 * 
+	 * @param sourceUrl - 
+	 * @return 
+	 */
+	public ChromeDriver chrome(String sourceUrl) {
+		chromeDriver = new ChromeDriver();
+		chromeDriver.get(sourceUrl);
+		return chromeDriver;
+	}
 
+	/**
+	 * Scrape the Instagram page associated with the newly constructed URL,
+	 * built from the hashtag provided to the program.
+	 * 
+	 * @param baseUrl - The URL from which we intend to scrape data.
+	 * @return childWebElems - A list of children associated with the retrieved
+	 * WebElement.
+	 */
 	@Override
-	List<List<WebElement>> scrapePage(String baseUrl) {
+	protected List<List<WebElement>> scrapePage(String baseUrl) {
 		ChromeDriver driver = chrome(baseUrl);
 		Set<WebElement> set = new HashSet<>();
 		List<WebElement> parentWebElems = driver.findElementsByCssSelector("#react-root > "
@@ -49,12 +77,18 @@ public class Instagram extends Scrapers {
 	}
 	
 	@Override
-	ArrayList<String> getChildLinks() {
+	protected ArrayList<String> getChildLinks() {
 		return null;
 	}
 
 	@Override
-	ArrayList<String> getHashTags() {
+	protected ArrayList<String> getHashTags() {
+		return null;
+	}
+
+	@Override
+	FirefoxDriver firefox(String sourceUrl) {
+		// TODO FireFox support, not yet integrated.
 		return null;
 	}
 }

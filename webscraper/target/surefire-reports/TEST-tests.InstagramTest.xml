@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.InstagramTest" time="0.006" tests="4" errors="0" skipped="0" failures="4">
+<testsuite name="tests.InstagramTest" time="0.004" tests="4" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -59,7 +59,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testGetChildLinks" classname="tests.InstagramTest" time="0.006">
+  <testcase name="testGetChildLinks" classname="tests.InstagramTest" time="0.003">
     <failure message="Not yet implemented" type="java.lang.AssertionError">java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
 	at tests.InstagramTest.testGetChildLinks(InstagramTest.java:21)
@@ -77,7 +77,7 @@
 	at tests.InstagramTest.testConstructBaseUrl(InstagramTest.java:11)
 </failure>
   </testcase>
-  <testcase name="testGetHashTags" classname="tests.InstagramTest" time="0">
+  <testcase name="testGetHashTags" classname="tests.InstagramTest" time="0.001">
     <failure message="Not yet implemented" type="java.lang.AssertionError">java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
 	at tests.InstagramTest.testGetHashTags(InstagramTest.java:26)

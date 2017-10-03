@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: tests.InstagramTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec <<< FAILURE! - in tests.InstagramTest
-testGetChildLinks(tests.InstagramTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec <<< FAILURE! - in tests.InstagramTest
+testGetChildLinks(tests.InstagramTest)  Time elapsed: 0.003 sec  <<< FAILURE!
 java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
 	at tests.InstagramTest.testGetChildLinks(InstagramTest.java:21)
@@ -17,7 +17,7 @@ java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
 	at tests.InstagramTest.testConstructBaseUrl(InstagramTest.java:11)
 
-testGetHashTags(tests.InstagramTest)  Time elapsed: 0 sec  <<< FAILURE!
+testGetHashTags(tests.InstagramTest)  Time elapsed: 0.001 sec  <<< FAILURE!
 java.lang.AssertionError: Not yet implemented
 	at org.junit.Assert.fail(Assert.java:88)
 	at tests.InstagramTest.testGetHashTags(InstagramTest.java:26)
